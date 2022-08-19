@@ -2,7 +2,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 9px 20px;
+    padding: 5px 20px;
     min-width: 100px;
     border-radius: 4px;
     font-size: 1.6rem;
@@ -26,6 +26,12 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
 }
 
 // Button types
