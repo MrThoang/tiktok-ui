@@ -26,6 +26,7 @@ import { faMessage, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { useEffect, useState } from 'react';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/image';
 
 const cx = classNames.bind(styles);
 
@@ -99,8 +100,8 @@ function Header() {
         ...MENU_ITEMS,
         {
             icon: <FontAwesomeIcon icon={faSignOut} />,
-            title: 'Feedback and help',
-            to: 'feedback',
+            title: 'Log out',
+            to: '/logout',
             separate: true,
         },
     ];
@@ -163,13 +164,14 @@ function Header() {
                         </>
                     )}
 
-                    <Menu visible="show" items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
+                    <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/e5d7d87607b2023a00e85979bf871b80~c5_100x100.jpeg?x-expires=1660813200&x-signature=XhF1bVE7%2FqgQCuNINgpKkGNe5YU%3D"
                                 className={cx('user-avatar')}
-                                alt=""
-                            ></img>
+                                alt="Bui Thi My Duyen"
+                                // fallback="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/e5d7d87607b2023a00e85979bf871b80~c5_100x100.jpeg?x-expires=1660813200&x-signature=XhF1bVE7%2FqgQCuNINgpKkGNe5YU%3D"
+                            />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
