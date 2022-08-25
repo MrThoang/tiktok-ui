@@ -4,10 +4,10 @@ import classNames from 'classnames/bind';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import AccountItem from '~/components/AccountItem';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import { useDebounce } from '~/Hooks';
+import { useDebounce } from '~/hooks';
 import styles from './search.module.scss';
 import { SearchIcon } from '~/components/Icons';
 
