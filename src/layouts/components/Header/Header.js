@@ -111,12 +111,12 @@ function Header() {
                             <Button simple>
                                 <FontAwesomeIcon icon={faPlus} /> Up load
                             </Button>
-                            <Tippy content="Messages" placement="bottom" delay={[0, 200]}>
+                            <Tippy content="Messages" placement="bottom" delay={[0, 50]}>
                                 <button className={cx('action-btn')}>
                                     <MessageIcon />
                                 </button>
                             </Tippy>
-                            <Tippy content="Inbox" placement="bottom" delay={[0, 200]}>
+                            <Tippy content="Inbox" placement="bottom" delay={[0, 50]}>
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
                                     <span className={cx('badge')}>12</span>
