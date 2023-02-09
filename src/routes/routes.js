@@ -5,10 +5,13 @@ import config from '~/config';
 //Page
 import Home from '~/pages/Home';
 import Following from '~/pages/Following';
-import Profile from '~/pages/Profile';
+// import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Live from '~/pages/Live';
+import React, { lazy } from 'react';
+
+const Profile = lazy(() => import('~/pages/Profile'));
 
 //Public Routes
 const publicRoutes = [

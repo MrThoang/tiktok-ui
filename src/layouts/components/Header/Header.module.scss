@@ -75,3 +75,81 @@
     margin-left: 24px;
     cursor: pointer;
 }
+
+// modal header
+.login-modal {
+    width: 483px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-cancel {
+    display: flex;
+    justify-content: end;
+    padding-top: 1.8rem;
+    padding-right: 1.8rem;
+}
+.button-cancel button {
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0.8rem;
+}
+.login-title {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 1.6rem 0 1.6rem 0;
+}
+.login-container {
+    overflow: auto;
+    width: 375px;
+    height: 565px;
+    margin: auto;
+    padding: unset;
+}
+
+.login-item-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.4rem 0;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    padding: 0 1.2rem;
+    height: 4.4rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.login-item {
+    display: flex;
+}
+
+.login-item-icon {
+    left: 1.2rem;
+    font-size: 2rem;
+    position: absolute;
+    display: flex;
+}
+
+.create-account {
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.4rem;
+    font-size: 1.5rem;
+}
+
+.create-account-button {
+    font-weight: 600;
+    margin-left: 0.4rem;
+    color: var(--primary);
+}
+
+.create-account-button:hover {
+    text-decoration: underline;
+}

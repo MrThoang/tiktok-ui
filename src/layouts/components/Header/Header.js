@@ -19,11 +19,26 @@ import {
     faUser,
     faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
-import { InboxIcon, MessageIcon } from '~/components/Icons';
+import {
+    InboxIcon,
+    MessageIcon,
+    QRcodeIcon,
+    UserIcon,
+    FacebookIcon,
+    GoogleIcon,
+    TwitterIcon,
+    LINEIcon,
+    KakaoTalkIcon,
+    AppleIcon,
+    InstagramIcon,
+    CancelIcon,
+} from '~/components/Icons';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/image';
 import Search from '../Search';
 import config from '~/config';
+import Modal from '~/components/Modal';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -59,7 +74,8 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const currentUser = false;
+    const [modalIsOpen, setIsOpen] = useState(false);
 
     //Handle logic
     const handleMenuChange = (menuItem) => {
@@ -96,6 +112,14 @@ function Header() {
         },
     ];
 
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -128,7 +152,9 @@ function Header() {
                             <Button simple>
                                 <FontAwesomeIcon icon={faPlus} /> Up load
                             </Button>
-                            <Button primary>Log in</Button>
+                            <Button primary onClick={openModal}>
+                                Log in
+                            </Button>
                         </>
                     )}
 
@@ -148,6 +174,96 @@ function Header() {
                     </Menu>
                 </div>
             </div>
+            <Modal isOpen={modalIsOpen}>
+                <div className={cx('login-modal')}>
+                    <div className={cx('button-cancel')}>
+                        <button onClick={closeModal}>
+                            <CancelIcon />
+                        </button>
+                    </div>
+                    <div className={cx('login-container')}>
+                        <p className={cx('login-title')}>Log in to TikTok</p>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <QRcodeIcon />
+                                </div>
+                                <p>Use QR code</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <UserIcon />
+                                </div>
+                                <p>Use phone / email / username</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <FacebookIcon />
+                                </div>
+                                <p>Continue with Facebook</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <GoogleIcon />
+                                </div>
+                                <p>Continue with Google</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <TwitterIcon />
+                                </div>
+                                <p>Continue with Twitter</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <LINEIcon />
+                                </div>
+                                <p>Continue with LINE</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <KakaoTalkIcon />
+                                </div>
+                                <p>Continue with KakaoTalk</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <AppleIcon />
+                                </div>
+                                <p>Continue with Apple</p>
+                            </div>
+                        </a>
+                        <a href="#" className={cx('login-item-box')}>
+                            <div className={cx('login-item')}>
+                                <div className={cx('login-item-icon')}>
+                                    <InstagramIcon />
+                                </div>
+                                <p>Continue with Instagram</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div className={cx('create-account')}>
+                        <div> Don’t have an account? </div>
+                        <a href="#">
+                            <span className={cx('create-account-button')}>Sign up</span>
+                        </a>
+                    </div>
+                </div>
+            </Modal>
         </header>
     );
 }
