@@ -14,4 +14,10 @@
 
 .content {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.children {
+    width: calc(var(--default-layout-width) - 390px);
 }

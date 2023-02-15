@@ -6,16 +6,23 @@ import styles from './SuggestedAccounts.module.scss';
 
 const cx = classNames.bind(styles);
 
-function SuggestedAccounts({ label, data = [], onSeeAll }) {
+function SuggestedAccounts({ label, data = [], onSeeAll, onSeeLess }) {
     return (
         <div className={cx('wrapper')}>
             <p className={cx('label')}>{label}</p>
             {data.map((account) => (
                 <AccountItem key={account.id} data={account} />
             ))}
-            <p className={cx('more-btn')} onClick={onSeeAll}>
-                See All
-            </p>
+            {data.length <= 5 && (
+                <p className={cx('more-btn')} onClick={onSeeAll}>
+                    See all
+                </p>
+            )}
+            {data.length > 5 && (
+                <p className={cx('more-btn')} onClick={onSeeLess}>
+                    See less
+                </p>
+            )}
         </div>
     );
 }

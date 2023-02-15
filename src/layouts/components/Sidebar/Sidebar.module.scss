@@ -1,5 +1,13 @@
 .wrapper {
+    position: fixed;
     width: 356px;
     padding: 20px 0 26px 8px;
     margin-left: -18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    z-index: 99;
+    background-color: var(--white);
+    bottom: 0;
+    top: 61px;
 }

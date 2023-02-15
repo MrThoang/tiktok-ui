@@ -183,84 +183,84 @@ function Header() {
                     </div>
                     <div className={cx('login-container')}>
                         <p className={cx('login-title')}>Log in to TikTok</p>
-                        <a href="#" className={cx('login-item-box')}>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <QRcodeIcon />
                                 </div>
                                 <p>Use QR code</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <UserIcon />
                                 </div>
                                 <p>Use phone / email / username</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <FacebookIcon />
                                 </div>
                                 <p>Continue with Facebook</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <GoogleIcon />
                                 </div>
                                 <p>Continue with Google</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <TwitterIcon />
                                 </div>
                                 <p>Continue with Twitter</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <LINEIcon />
                                 </div>
                                 <p>Continue with LINE</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <KakaoTalkIcon />
                                 </div>
                                 <p>Continue with KakaoTalk</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <AppleIcon />
                                 </div>
                                 <p>Continue with Apple</p>
                             </div>
-                        </a>
-                        <a href="#" className={cx('login-item-box')}>
+                        </Link>
+                        <Link to={'#'} className={cx('login-item-box')}>
                             <div className={cx('login-item')}>
                                 <div className={cx('login-item-icon')}>
                                     <InstagramIcon />
                                 </div>
                                 <p>Continue with Instagram</p>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <div className={cx('create-account')}>
                         <div> Don’t have an account? </div>
-                        <a href="#">
+                        <Link to={'#'}>
                             <span className={cx('create-account-button')}>Sign up</span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </Modal>
